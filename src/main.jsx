@@ -10,6 +10,7 @@ import AddProduct from "./Components/AddProduct/AddProduct.jsx";
 import Login from "./Components/Authentication/Login/Login.jsx";
 import Register from "./Components/Authentication/Register/Register.jsx";
 import AuthProvider from "./Components/Authentication/AuthProvider/AuthProvider.jsx";
+import PrivateRoute from "./Components/Authentication/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -22,11 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addcart",
-        element: <AddCart></AddCart>,
+        element: <PrivateRoute><AddCart></AddCart></PrivateRoute>,
       },
       {
         path: "/addproduct",
-        element: <AddProduct></AddProduct>,
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
       {
         path: "/login",
