@@ -34,7 +34,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/addproduct"
+              to="/product"
               className="text-white hover:text-pink-300 transition duration-300"
             >
               Add Product
