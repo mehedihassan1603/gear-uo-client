@@ -13,6 +13,7 @@ import AuthProvider from "./Components/Authentication/AuthProvider/AuthProvider.
 import PrivateRoute from "./Components/Authentication/PrivateRoute/PrivateRoute";
 import Details from "./Components/Details/Details.jsx";
 import Brand from "./Components/Brand/Brand.jsx";
+import Update from "./Components/Update/Update.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         path: "/brand/:brand",
         element: <Brand></Brand>,
         loader: ()=> fetch('http://localhost:5000/product')
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
       },
       {
         path: "/login",

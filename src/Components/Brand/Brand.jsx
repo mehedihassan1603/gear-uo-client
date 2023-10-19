@@ -27,7 +27,7 @@ const Brand = () => {
             <p>Price: {product.price}$</p>
             <h3>Rating: {product.rating}</h3>
             <Link to={`/details/${product._id}`}><button className="btn btn-accent">Details</button></Link>
-            <button className="btn btn-neutral">Update</button>
+            <Link to={`/update/${product._id}`}><button className="btn btn-neutral">Update</button></Link>
           </div>
         ))}
       </div>
