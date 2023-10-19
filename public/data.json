@@ -1,0 +1,32 @@
+[
+    {
+      "brand": "Tesla",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+      "id": 1
+    },
+    {
+      "brand": "Honda",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg",
+      "id": 2
+    },
+    {
+      "brand": "Toyota",
+      "photo_url": "https://brandlogos.net/wp-content/uploads/2013/05/toyota-3d-vector-logo-400x400.png",
+      "id": 3
+    },
+    {
+      "brand": "BMW",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/600px-BMW.svg.png",
+      "id": 4
+    },
+    {
+      "brand": "Mercedes Benz",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/de/thumb/4/45/Mercedes-Benz-Logo.svg/2560px-Mercedes-Benz-Logo.svg.png",
+      "id": 5
+    },
+    {
+      "brand": "Audi",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Audi_logo_detail.svg/1426px-Audi_logo_detail.svg.png",
+      "id": 6
+    }
+  ]

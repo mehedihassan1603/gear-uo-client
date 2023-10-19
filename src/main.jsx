@@ -11,6 +11,8 @@ import Login from "./Components/Authentication/Login/Login.jsx";
 import Register from "./Components/Authentication/Register/Register.jsx";
 import AuthProvider from "./Components/Authentication/AuthProvider/AuthProvider.jsx";
 import PrivateRoute from "./Components/Authentication/PrivateRoute/PrivateRoute";
+import Details from "./Components/Details/Details.jsx";
+import Brand from "./Components/Brand/Brand.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,16 +22,27 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/product')
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/addcart",
-        element: <PrivateRoute><AddCart></AddCart></PrivateRoute>,
+        element: <AddCart></AddCart>,
+        loader: ()=> fetch('http://localhost:5000/addcart')
       },
       {
         path: "/product",
         element: <AddProduct></AddProduct>,
         
+      },
+      {
+        path: "/details/:_id",
+        loader: () => fetch("http://localhost:5000/product"),
+        element: <Details></Details>,
+      },
+      {
+        path: "/brand/:brand",
+        element: <Brand></Brand>,
+        loader: ()=> fetch('http://localhost:5000/product')
       },
       {
         path: "/login",

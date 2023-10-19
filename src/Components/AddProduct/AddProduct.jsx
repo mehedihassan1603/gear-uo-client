@@ -15,7 +15,6 @@ const AddProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle the form submission here, e.g., send data to a server or store it in state.
     console.log(product);
 
     fetch("http://localhost:5000/product", {
@@ -44,8 +43,8 @@ const AddProduct = () => {
 
   return (
     <div className="bg-gray-200 p-6 rounded-lg">
-      <h1 className="text-2xl font-bold mb-4">Automotive Product Form</h1>
-      <form onSubmit={handleSubmit} id="automotiveForm">
+      <h1 className="text-2xl font-bold mb-4">Add Product</h1>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="image" className="block text-gray-600">
             Image URL:
@@ -55,7 +54,6 @@ const AddProduct = () => {
             id="image"
             name="image"
             required
-            value={product.image}
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
@@ -69,7 +67,6 @@ const AddProduct = () => {
             id="name"
             name="name"
             required
-            value={product.name}
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
@@ -78,15 +75,23 @@ const AddProduct = () => {
           <label htmlFor="brand" className="block text-gray-600">
             Brand Name:
           </label>
-          <input
-            type="text"
+          <select
             id="brand"
             name="brand"
             required
-            value={product.brand}
+            defaultValue=""
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
-          />
+          >
+            <option value="">Please Select One</option>
+            <option value="tesla">Tesla</option>
+            <option value="honda">Honda</option>
+            <option value="toyota">Toyota</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedesbenz">Marcedes Benz</option>
+            <option value="audi">Audi</option>
+            <option value="others">Others</option>
+          </select>
         </div>
         <div className="mb-4">
           <label htmlFor="type" className="block text-gray-600">
@@ -95,12 +100,16 @@ const AddProduct = () => {
           <select
             id="type"
             name="type"
-            value={product.type}
+            required
+            defaultValue=""
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           >
+            <option value="">Please Select One</option>
             <option value="car">Car</option>
             <option value="motorcycle">Motorcycle</option>
+            <option value="Engines">Engines</option>
+            <option value="compressor">Compressor</option>
             <option value="accessory">Accessory</option>
           </select>
         </div>
@@ -112,9 +121,9 @@ const AddProduct = () => {
             type="number"
             id="price"
             name="price"
-            step="0.01"
+            placeholder="in Dollar only"
             required
-            value={product.price}
+            // value={product.price}
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
@@ -127,7 +136,6 @@ const AddProduct = () => {
             id="description"
             name="description"
             required
-            value={product.description}
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
@@ -142,7 +150,6 @@ const AddProduct = () => {
             name="rating"
             step="0.1"
             required
-            value={product.rating}
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
