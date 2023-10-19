@@ -1,25 +1,35 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Update = () => {
-    const loadedProduct = useLoaderData();
-    const {_id, image, brand, name, type, price, description, rating} = loadedProduct;
+  const loadedProduct = useLoaderData();
+  const navigate = useNavigate();
+  const { _id, image, brand, name, type, price, description, rating } =
+    loadedProduct;
 
-    const handleSubmit = e =>{
-        e.preventDefault();
-        const name= e.target.name.value;
-        const image = e.target.image.value;
-        const brand = e.target.brand.value;
-        const type = e.target.type.value;
-        const price = e.target.price.value;
-        const description = e.target.description.value;
-        const rating = e.target.rating.value;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const brand = e.target.brand.value;
+    const type = e.target.type.value;
+    const price = e.target.price.value;
+    const description = e.target.description.value;
+    const rating = e.target.rating.value;
 
-        const updateProduct = {image, brand, name, type, price, description, rating}
-        console.log(updateProduct);
+    const updateProduct = {
+      image,
+      brand,
+      name,
+      type,
+      price,
+      description,
+      rating,
+    };
+    console.log(updateProduct);
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`http://localhost:5000/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -29,17 +39,20 @@ const Update = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.modifiedCount>0) {
+        if (data.modifiedCount > 0) {
           toast.success("Product Update successfully!", {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 2000,
           });
+          setTimeout(() => {
+            navigate(`/brand/${brand}`);
+          }, 2000);
         }
       });
-    }
+  };
 
-    return (
-        <div className="bg-gray-200 p-6 rounded-lg">
+  return (
+    <div className="bg-gray-200 p-6 rounded-lg">
       <h1 className="text-2xl font-bold mb-4">Update Product</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -65,7 +78,6 @@ const Update = () => {
             name="name"
             defaultValue={name}
             required
-            
             className="w-full border p-2 rounded-md"
           />
         </div>
@@ -78,7 +90,6 @@ const Update = () => {
             name="brand"
             defaultValue={brand}
             required
-            
             className="w-full border p-2 rounded-md"
           >
             <option value="">Please Select One</option>
@@ -159,7 +170,7 @@ const Update = () => {
       </form>
       <ToastContainer></ToastContainer>
     </div>
-    );
+  );
 };
 
 export default Update;

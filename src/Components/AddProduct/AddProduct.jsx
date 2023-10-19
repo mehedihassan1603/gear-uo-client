@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const [product, setProduct] = useState({
     image: "",
     name: "",
@@ -32,6 +34,9 @@ const AddProduct = () => {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 2000,
           });
+          setTimeout(() => {
+            navigate(`/brand/${brand}`);
+          }, 2000);
         }
       });
   };

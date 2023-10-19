@@ -36,6 +36,7 @@ const Details = () => {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 2000,
           });
+          
         }
       })
   }
