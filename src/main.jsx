@@ -14,6 +14,7 @@ import PrivateRoute from "./Components/Authentication/PrivateRoute/PrivateRoute"
 import Details from "./Components/Details/Details.jsx";
 import Brand from "./Components/Brand/Brand.jsx";
 import Update from "./Components/Update/Update.jsx";
+import NotFound from "./Components/NotFound/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },

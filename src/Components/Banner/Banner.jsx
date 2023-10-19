@@ -8,14 +8,14 @@ const Banner = () => {
         id="slide1"
         className="carousel-item relative w-full h-[500px]"
         style={{
-          backgroundImage: `url("https://i.ibb.co/NSb76w4/1.jpg")`,
+          backgroundImage: `url("https://i.ibb.co/NWqp2v7/justus-menke-81-Gp-Bv2-T-b-M-unsplash.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="overlay"></div>
         <div className="text">
-        <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">Welcome to EduEvent.</span></p>
+        {/* <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">Welcome to EduEvent.</span></p> */}
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide3" className="btn btn-circle">
@@ -30,14 +30,14 @@ const Banner = () => {
         id="slide2"
         className="carousel-item relative w-full h-[500px]"
         style={{
-          backgroundImage: `url("https://i.ibb.co/tb8g92X/3.png")`,
+          backgroundImage: `url("https://i.ibb.co/JjTrpb8/r-nolan-1-Zh-Zp-P91ol-Q-unsplash.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="overlay"></div>
         <div className="text">
-        <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">New Course Launching Soon...</span></p>
+        {/* <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">New Course Launching Soon...</span></p> */}
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide1" className="btn btn-circle">
@@ -52,14 +52,14 @@ const Banner = () => {
         id="slide3"
         className="carousel-item relative w-full h-[500px]"
         style={{
-          backgroundImage: `url("https://i.ibb.co/BcMYbSm/2.jpg")`,
+          backgroundImage: `url("https://i.ibb.co/YQg3fvx/raivis-razgals-ost-LWBW4hsw-unsplash.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="overlay"></div>
         <div className="text">
-        <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">Get Started from Today...</span></p>
+        {/* <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">Get Started from Today...</span></p> */}
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide2" className="btn btn-circle">

@@ -1,25 +1,31 @@
+import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from './../Authentication/AuthProvider/AuthProvider';
 
 const Details = () => {
+  const {user} = useContext(AuthContext);
   const details = useLoaderData();
   const { _id } = useParams();
   const data = details.find((item) => item._id === _id);
-  console.log(data);
+  // console.log(data);
 
   if (!data) {
     return <div>Data not found</div>;
   }
 
   const handleAddToCart = async () =>{
+    
     const productToAdd = {
       name: data.name,
       brand: data.brand,
       image: data.image,
       description: data.description,
       price: data.price,
+      userEmail: user ? user.email : null,
     };
+    console.log(productToAdd)
 
     fetch('http://localhost:5000/addcart', {
         method: 'POST',
