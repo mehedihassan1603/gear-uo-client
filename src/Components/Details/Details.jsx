@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Details = () => {
   const details = useLoaderData();
@@ -29,6 +31,12 @@ const Details = () => {
       .then(res => res.json())
       .then(data => {
         console.log(data)
+        if (data.insertedId) {
+          toast.success("Successfully added to My Cart!", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 2000,
+          });
+        }
       })
   }
 
@@ -38,6 +46,7 @@ const Details = () => {
     <img src={data.image} alt="" />
     <p>Description: {data.description}</p>
     <button className="btn btn-ghost" onClick={handleAddToCart}>ADD TO CART</button>
+    <ToastContainer></ToastContainer>
   </div>;
 };
 
