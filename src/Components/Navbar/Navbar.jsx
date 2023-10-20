@@ -23,7 +23,7 @@ const Navbar = () => {
         <h1 className="fonty text-3xl text-white text-bold">Gear Up</h1>
       </Link>
       <div className="flex">
-        <ul className="space-x-6 flex flex-col md:flex-col lg:flex-row text-xl justify-center items-center">
+        <ul className="space-x-6 flex flex-col md:flex-col lg:flex-row text-lg justify-center items-center">
           <li>
             <NavLink
               to="/"
@@ -65,7 +65,7 @@ const Navbar = () => {
           </>
         ) : (
           <Link to="/login">
-            <button className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <button className="bg-gradient-to-r from-green-800 via-green-600 to-green-800 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold py-2 px-4 rounded-full shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
               Login
             </button>
           </Link>

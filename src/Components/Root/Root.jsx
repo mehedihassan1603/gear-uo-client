@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 
 const Root = () => {
     return (
-        <div>
+        <div className="bg-gradient-to-r from-slate-700 via-cyan-800 to-slate-800">
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>

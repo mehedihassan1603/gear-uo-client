@@ -15,7 +15,7 @@ const Banner = () => {
       >
         <div className="overlay"></div>
         <div className="text">
-        {/* <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">Welcome to EduEvent.</span></p> */}
+        <p className="bnr p-6 rounded-full"><span className="text-5xl">New Arrivals Coming.........</span></p>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide3" className="btn btn-circle">
@@ -37,7 +37,7 @@ const Banner = () => {
       >
         <div className="overlay"></div>
         <div className="text">
-        {/* <p className="bnr bg-rose-200 text-black p-6 rounded-full"><span className="text-3xl">New Course Launching Soon...</span></p> */}
+        
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide1" className="btn btn-circle">

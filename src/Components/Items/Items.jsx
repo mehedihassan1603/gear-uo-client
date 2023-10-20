@@ -8,7 +8,7 @@ const Items = ({ product }) => {
   return (
     <div className="mt-10 flex flex-col justify-center items-center">
       <Link to={`/brand/${brand}`}>
-      <div className="bg-purple-300 shadow-md rounded-lg p-4">
+      <div className="bg-gradient-to-r from-green-700 via-green-200 to-green-700 shadow-md rounded-lg p-4">
         <figure className="w-72 h-72 mx-auto">
           <img
             src={photo_url}
@@ -17,7 +17,7 @@ const Items = ({ product }) => {
           />
         </figure> 
       </div>
-      <div><h1 className="text-3xl font-semibold pt-2">{brand}</h1></div>
+      <div><h1 className="text-3xl text-center text-white font-semibold pt-2">{brand}</h1></div>
       
       </Link>
     </div>
