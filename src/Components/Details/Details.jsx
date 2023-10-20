@@ -48,11 +48,11 @@ const Details = () => {
   }
 
 
-  return <div>
-    <h1>Name: {data.name}</h1>
+  return <div className="py-10">
+    <h1 className="text-3xl font-bold text-white text-center">Name: {data.name}</h1>
     <img src={data.image} alt="" />
-    <p>Description: {data.description}</p>
-    <button className="btn btn-ghost" onClick={handleAddToCart}>ADD TO CART</button>
+    <p className="text-lg text-white w-11/12 mx-auto">Product Description: {data.description}</p>
+    <div className="flex justify-center items-center mt-10"><button className="px-5 py-2 rounded-3xl text-lg card-hover mt-4 bg-gradient-to-r from-green-500 via-green-300 to-green-500" onClick={handleAddToCart}>ADD TO CART</button></div>
     <ToastContainer></ToastContainer>
   </div>;
 };
