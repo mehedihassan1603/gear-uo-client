@@ -35,7 +35,7 @@ const AddProduct = () => {
             autoClose: 2000,
           });
           setTimeout(() => {
-            navigate(`/brand/${brand}`);
+            navigate(`/`);
           }, 2000);
         }
       });
@@ -51,9 +51,7 @@ const AddProduct = () => {
       <h1 className="text-2xl font-bold mb-4">Add Product</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="image" className="block text-gray-600">
-            Image URL:
-          </label>
+          <label htmlFor="image" className="block text-gray-600">Image URL:</label>
           <input
             type="url"
             id="image"
@@ -64,9 +62,7 @@ const AddProduct = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-600">
-            Name:
-          </label>
+          <label htmlFor="name" className="block text-gray-600">Name:</label>
           <input
             type="text"
             id="name"
@@ -77,9 +73,7 @@ const AddProduct = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="brand" className="block text-gray-600">
-            Brand Name:
-          </label>
+          <label htmlFor="brand" className="block text-gray-600">Brand Name:</label>
           <select
             id="brand"
             name="brand"
@@ -99,9 +93,7 @@ const AddProduct = () => {
           </select>
         </div>
         <div className="mb-4">
-          <label htmlFor="type" className="block text-gray-600">
-            Type:
-          </label>
+          <label htmlFor="type" className="block text-gray-600">Type:</label>
           <select
             id="type"
             name="type"
@@ -119,24 +111,19 @@ const AddProduct = () => {
           </select>
         </div>
         <div className="mb-4">
-          <label htmlFor="price" className="block text-gray-600">
-            Price:
-          </label>
+          <label htmlFor="price" className="block text-gray-600">Price:</label>
           <input
             type="number"
             id="price"
             name="price"
             placeholder="in Dollar only"
             required
-            // value={product.price}
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="description" className="block text-gray-600">
-            Short Description:
-          </label>
+          <label htmlFor="description" className="block text-gray-600">Short Description:</label>
           <textarea
             id="description"
             name="description"
@@ -146,27 +133,28 @@ const AddProduct = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="rating" className="block text-gray-600">
-            Rating:
-          </label>
+          <label htmlFor="rating" className="block text-gray-600">Rating:</label>
           <input
             type="number"
             id="rating"
             name="rating"
             step="0.1"
+            placeholder="out of 5"
             required
             onChange={handleChange}
             className="w-full border p-2 rounded-md"
           />
         </div>
+        <div className="flex justify-center items-center">
         <button
           type="submit"
-          className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700"
+          className="px-5 py-2 rounded-3xl text-lg card-hover mt-4 bg-gradient-to-r from-orange-500 via-rose-300 to-orange-500"
         >
-          Add
+          ADD PRODUCT
         </button>
+        </div>
       </form>
-      <ToastContainer></ToastContainer>
+      <ToastContainer />
     </div>
   );
 };
