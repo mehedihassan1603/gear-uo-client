@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/AvenirNextLTPro-Regular.otf') format('opentype');
+    /* Add more formats for cross-browser compatibility if necessary */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-avenir {
+    font-family: 'Avenir Next', sans-serif;
+  }

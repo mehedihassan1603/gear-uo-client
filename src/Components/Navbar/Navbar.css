@@ -3,8 +3,17 @@
 .fonty{
   font-family: 'Style Script', cursive;
 }
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../../assets/AvenirNextLTPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-avenir {
+  font-family: 'Avenir Next', sans-serif;
+}
 a.active{
-    /* text-decoration: underline; */
     background-color: rgb(250, 204, 173);
     color: black;
     padding-bottom: 2px;

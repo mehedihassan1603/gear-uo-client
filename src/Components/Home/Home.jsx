@@ -22,7 +22,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div className="w-full mx-auto rounded-lg shadow-lg p-4">
-        <h1 className="marquee text-5xl font-semibold py-10 text-slate-100 text-center">
+        <h1 className="marquee text-5xl font-avenir font-semibold py-10 text-slate-100 text-center">
           <span>Choose a Brand that you want to explore!!!</span>
         </h1>
         <div className="grid grid-cols-2 gap-6">

@@ -23,7 +23,7 @@ const Navbar = () => {
         <h1 className="fonty text-3xl text-white text-bold">Gear Up</h1>
       </Link>
       <div className="flex">
-        <ul className="space-x-6 flex flex-col md:flex-col lg:flex-row text-lg justify-center items-center">
+        <ul className="space-x-6 font-avenir flex flex-col md:flex-col lg:flex-row text-lg justify-center items-center">
           <li>
             <NavLink
               to="/"
