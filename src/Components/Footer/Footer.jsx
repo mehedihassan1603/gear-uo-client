@@ -1,11 +1,11 @@
 import React from "react";
-
+// flex flex-col justify-center lg:flex-row lg:justify-between
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-5 mt-10">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between">
-        <div className="lg:w-1/4">
-          <h3 className="text-2xl mb-3">Gear Up</h3>
+    <footer className="bg-gray-800  text-white py-5 mt-10">
+      <div className="container pl-10 lg:pl-0 mx-auto grid grid-cols-2 lg:grid-cols-4">
+        <div className="lg:w-2/4">
+          <h3 className="text-3xl text-red-500 mb-3">Gear Up</h3>
           <h1 className="mt-6 mb-3 text-xl">Visit Us: </h1>
           <ul className="list-none p-0">
             <li>
@@ -28,23 +28,40 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="lg:w-1/4">
-          <h3 className="text-xl mb-3">Smart Vehicle</h3>
-          <ul className="list-none p-0"></ul>
-        </div>
-        <div className="lg:w-1/4">
-          <h3 className="text-xl mb-3">Gear Deals</h3>
+        <div className="lg:w-2/4">
+          <h3 className="text-xl mb-3">Smart Vehicle:</h3>
           <ul className="list-none p-0">
             <li>
-              <a href="#">GearShare</a>
+              <a href="#">BMW 3-Series</a>
+            </li>
+            <li>
+              <a href="#">BMW 4-Series</a>
+            </li>
+            <li>
+              <a href="#">Honda 1250CC RS</a>
+            </li>
+            <li>
+              <a href="#">Toyota Corolla</a>
+            </li>
+            <li>
+              <a href="#">Tesla Model X DUal Motor</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div className="lg:w-2/4">
+          <h3 className="text-xl my-3">Gear Deals:</h3>
+          <ul className="list-none p-0">
+            <li>
+              <a href="#">GearShare:</a>
             </li>
             <li>
               <a href="#">GearBusiness</a>
             </li>
           </ul>
         </div>
-        <div className="lg:w-1/4">
-          <h3 className="text-xl mb-3">About Us</h3>
+        <div className="lg:w-2/4">
+          <h3 className="text-xl my-3">About Us:</h3>
           <ul className="list-none p-0">
             <li>
               <a href="#">Company</a>

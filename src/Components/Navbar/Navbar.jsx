@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-gradient-to-r from-slate-900 via-cyan-900 to-blue-900 px-6 py-3 flex justify-between">
-      <Link to={"/"} className="flex items-center">
+      <Link to={"/"} className="flex flex-col lg:flex-row items-center">
         <img
           className="rounded-full mr-2"
           src="https://i.ibb.co/w7MXjg1/Whats-App-Image-2023-10-18-at-00-04-25-aa47fc69.jpg"
@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="text-white flex items-center">
+      <div className="text-white flex flex-col lg:flex-row items-center">
         {user ? (
           <>
             <div className="flex flex-col justify-center items-center">

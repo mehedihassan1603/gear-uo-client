@@ -29,7 +29,7 @@ const Update = () => {
     };
     console.log(updateProduct);
 
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://gear-up-server-nine.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -52,7 +52,7 @@ const Update = () => {
   };
 
   return (
-    <div className="bg-gray-200 p-6 rounded-lg">
+    <div className="bg-gray-200 w-9/12 mt-10 mx-auto p-6 rounded-lg">
       <h1 className="text-2xl font-bold mb-4">Update Product</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -161,12 +161,14 @@ const Update = () => {
             className="w-full border p-2 rounded-md"
           />
         </div>
+        <div className="flex justify-center items-center">
         <button
           type="submit"
-          className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700"
+          className="px-5 py-2 rounded-3xl text-lg card-hover mt-4 bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500"
         >
-          Add
+          Submit
         </button>
+        </div>
       </form>
       <ToastContainer></ToastContainer>
     </div>

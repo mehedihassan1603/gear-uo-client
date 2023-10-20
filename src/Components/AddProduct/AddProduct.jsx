@@ -19,7 +19,7 @@ const AddProduct = () => {
     e.preventDefault();
     console.log(product);
 
-    fetch("http://localhost:5000/product", {
+    fetch("https://gear-up-server-nine.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -47,7 +47,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="bg-gray-200 p-6 rounded-lg">
+    <div className="bg-gray-200 w-9/12 mt-10 mx-auto p-6 rounded-lg">
       <h1 className="text-2xl font-bold mb-4">Add Product</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

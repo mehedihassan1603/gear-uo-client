@@ -68,7 +68,7 @@ const Brand = () => {
           <img src={product.image} className="w-full h-[500px]" alt={`Image ${index + 1}`} />
         </div>
         <div className="flex justify-center items-center">
-          <h1 className="text-white text-3xl font-avenir">
+          <h1 className="text-white text-3xl font-avenir hidden lg:block">
             We offer you <br />
             ---The freedom to explore. <br />
             ---The thrill of the open road. <br />
@@ -97,7 +97,7 @@ const Brand = () => {
         <div>
           <h1 className="text-3xl text-white text-center mb-2">Here are the Products for you:</h1>
         </div>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 ml-8 md:ml-0 lg:ml-0 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredProducts.length === 0 ? (
             <div className="col-span-3 mt-20 pb-20"><h1 className="text-center text-3xl text-red-500">No Product available of this brand right now!!!</h1></div>
           ) : (

@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/addcart",
         element: <PrivateRoute><AddCart></AddCart></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/addcart')
+        loader: ()=> fetch('https://gear-up-server-nine.vercel.app/addcart')
       },
       {
         path: "/product",
@@ -38,18 +38,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:_id",
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () => fetch("https://gear-up-server-nine.vercel.app/product"),
         element: <PrivateRoute><Details></Details></PrivateRoute>,
       },
       {
         path: "/brand/:brand",
         element: <Brand></Brand>,
-        loader: ()=> fetch('http://localhost:5000/product')
+        loader: ()=> fetch('https://gear-up-server-nine.vercel.app/product')
       },
       {
         path: '/update/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({params})=> fetch(`https://gear-up-server-nine.vercel.app/product/${params.id}`)
       },
       {
         path: "/login",

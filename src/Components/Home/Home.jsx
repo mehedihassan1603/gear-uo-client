@@ -25,7 +25,7 @@ const Home = () => {
         <h1 className="marquee text-5xl font-avenir font-semibold py-10 text-slate-100 text-center">
           <span>Choose a Brand that you want to explore!!!</span>
         </h1>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {products.map((data, index) => (
             <div
               key={data.id}
@@ -39,7 +39,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center px-20 gap-10 py-10 bg-slate-900">
+      <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center px-20 gap-10 py-10 bg-slate-900">
         <div className="hero bg-sky-200 rounded-lg shadow-lg card-hover">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img

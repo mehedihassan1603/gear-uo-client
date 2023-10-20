@@ -27,7 +27,7 @@ const Details = () => {
     };
     console.log(productToAdd)
 
-    fetch('http://localhost:5000/addcart', {
+    fetch('https://gear-up-server-nine.vercel.app/addcart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

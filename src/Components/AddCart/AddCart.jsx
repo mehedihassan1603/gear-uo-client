@@ -27,7 +27,7 @@ const AddCart = () => {
           }).then((result) => {
             if (result.isConfirmed) {
               
-              fetch(`http://localhost:5000/addcart/${id}`,{
+              fetch(`https://gear-up-server-nine.vercel.app/addcart/${id}`,{
                 method: 'DELETE'
               })
               .then(res=>res.json())
