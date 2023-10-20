@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../Authentication/AuthProvider/AuthProvider";
+import Footer from "../Footer/Footer";
 
 const AddCart = () => {
     const cartProducts = useLoaderData();
@@ -49,21 +50,46 @@ const AddCart = () => {
     };
 
     return (
-        <div>
-            <h1>Add Cart: {filteredProducts.length}</h1>
-            <div>
-                {
-                  
-                    filteredProducts.map((mycart, index) => (
-                        <div key={mycart._id}>
-                            <h1>No. {index + 1}</h1>
-                            <h1>Name: {mycart.name}</h1>
-                            <button onClick={() => handleDelete(mycart._id)} className="btn btn-ghost">Delete</button>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
+      <div>
+      <h1 className="text-3xl text-white text-center mt-5 font-semibold mb-4">My Product:</h1>
+      <table className="w-5/6 mx-auto divide-y divide-gray-200">
+        <thead>
+          <tr>
+            <th className="px-6 text-white py-3 text-left text-xs font-medium uppercase tracking-wider">
+              No.
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+              Name
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-200">
+          {filteredProducts.map((mycart, index) => (
+            <tr key={mycart._id}>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-lg font-medium text-gray-900">{index + 1}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-lg text-gray-900">{mycart.name}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <button
+                  onClick={() => handleDelete(mycart._id)}
+                  className="btn btn-ghost text-red-600 hover:text-red-900"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <Footer></Footer>
+    </div>
+    
     );
 };
 
