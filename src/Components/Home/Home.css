@@ -43,7 +43,43 @@
   }
 
 
-
+  :root {
+     /* Dark background color */
+    --background-light: #f9f9f9; /* Light background color */
+    --text-dark: #fff; /* Dark text color */
+    --text-light: #000; /* Light text color */
+  }
+  
+  .theme-dark {
+    background-color: black;
+    --text: var(--text-dark);
+  }
+  
+  .theme-light {
+    --background: var(--background-light);
+    --text: var(--text-light);
+  }
+  
+  body {
+    background-color: #000;
+    color: var(--text);
+  }
+  
+  /* Define styles for your dark/light mode toggle button */
+  .theme-toggle-button {
+    padding: 10px 20px;
+    background-color: #000; /* Background color for the button */
+    color: #fff; /* Text color for the button */
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Additional styles for the button on hover and focus */
+  .theme-toggle-button:hover,
+  .theme-toggle-button:focus {
+    background-color: #333; /* Background color on hover/focus */
+  }
+  
 
 
 
