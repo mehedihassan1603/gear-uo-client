@@ -7,6 +7,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 import ObservationForm from "./Observationform/ObservationForm";
+import TopBrand from "./TopBrand";
+import ServicesComponent from "./ServicesComponent";
 
 const Home = () => {
   const products = useLoaderData();
@@ -21,17 +23,17 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="w-full mx-auto rounded-lg shadow-lg p-4">
-        <h1 className="marquee text-5xl font-avenir font-semibold py-10 text-slate-100 text-center">
-          <span>Choose a Brand that you want to explore!!!</span>
+      <TopBrand></TopBrand>
+      <div className="w-full mx-auto rounded-lg p-4 mb-10">
+        <h1 className="marquee text-5xl font-avenir font-semibold py-3 text-slate-100 text-center">
+          <span className=" bg-slate-800 p-3 rounded-2xl">Choose a Brand that you want to explore!!!</span>
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((data, index) => (
             <div
               key={data.id}
-              data-aos={index % 2 === 0 ? "slide-left" : "slide-right"}
-              data-aos-delay="200"
-              data-aos-duration="1500"
+              data-aos={"slide-up"}
+              data-aos-delay="100"
             >
               <Items product={data}></Items>
             </div>
@@ -39,7 +41,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center px-20 gap-10 py-10 bg-slate-900">
+
+      <ServicesComponent></ServicesComponent>
+
+
+
+      <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center px-20 gap-10 py-10 bg-slate-800">
         <div className="hero bg-sky-200 rounded-lg shadow-lg card-hover">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img

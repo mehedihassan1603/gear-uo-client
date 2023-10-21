@@ -31,15 +31,15 @@ const ObservationForm = () => {
 
   return (
     <div className="mt-10 w-5/6 mx-auto">
-      <h2 className="text-3xl text-center text-white font-semibold">Share Your Observation with Us:</h2>
+      <h2 className="text-3xl text-center text-white bg-slate-800 font-semibold">Share Your Observation with Us:</h2>
       <form onSubmit={handleObservationSubmit} className="">
         <div className="mb-4">
-          <label htmlFor="observation" className="block text-gray-700">Observation:</label>
+          
           <textarea
             id="observation"
             name="observation"
             rows="8"
-            className="w-full px-4 py-2 border rounded-lg"
+            className="w-full px-4 py-2 border rounded-b-lg"
             value={observation}
             onChange={handleObservationChange}
             placeholder="Write Something Here..."

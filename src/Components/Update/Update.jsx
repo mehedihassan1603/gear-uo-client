@@ -53,7 +53,7 @@ const Update = () => {
 
   return (
     <div className="bg-gray-200 w-9/12 mt-10 mx-auto p-6 rounded-lg">
-      <h1 className="text-2xl font-bold mb-4">Update Product</h1>
+      <h1 className="text-2xl font-bold bg-slate-800 py-2 rounded-lg text-center text-white mb-4">Update Product</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="image" className="block text-gray-600">

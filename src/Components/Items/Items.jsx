@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './items.css'
 
 const Items = ({ product }) => {
   console.log(product);
   const { brand, photo_url, id } = product;
 
   return (
-    <div className="mt-10 flex flex-col justify-center items-center">
+    <div className="mt-10 flex flex-col justify-center items-center card-hover">
       <Link to={`/brand/${brand}`}>
-      <div className="bg-gradient-to-r from-green-700 via-green-200 to-green-700 shadow-md rounded-lg p-4">
+      <div className=" bg-white shadow-lg rounded-lg p-4">
         <figure className="w-72 h-72 mx-auto">
           <img
             src={photo_url}
@@ -17,7 +18,7 @@ const Items = ({ product }) => {
           />
         </figure> 
       </div>
-      <div><h1 className="text-3xl text-center text-white font-semibold pt-2">{brand}</h1></div>
+      <div><h1 className="text-3xl text-center text-white bg-slate-800 font-semibold pt-2">{brand}</h1></div>
       
       </Link>
     </div>
