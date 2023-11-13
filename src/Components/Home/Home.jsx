@@ -9,6 +9,8 @@ import "./Home.css";
 import ObservationForm from "./Observationform/ObservationForm";
 import TopBrand from "./TopBrand";
 import ServicesComponent from "./ServicesComponent";
+import Chat from "./Chat";
+import Welcome from "./Welcome";
 
 const Home = () => {
   const products = useLoaderData();
@@ -86,6 +88,47 @@ const Home = () => {
       </div>
 
       <ObservationForm />
+
+
+      {/* <div className="flex flex-col md:flex-row lg:flex-row justify-around my-10 gap-10 items-center w-9/12 mx-auto text-black bg-blue-200 p-6">
+        <div className="" data-aos="slide-right">
+          <img src="https://doortofuture.com/wp-content/uploads/2021/11/online-jobs-from-home-without-investment1.jpg" alt="" />
+        </div>
+        <div className="w-3/4 mx-auto" data-aos="slide-up">
+          <h1 className="text-3xl font-semibold">Online jobs for students can be lucrative, pay well, and set you on a successful career path… if you choose them well & you’re willing to do the work.</h1>
+        </div>
+      </div> */}
+
+
+      {/* <div className="flex flex-col md:flex-col lg:flex-row-reverse justify-center items-center px-20 gap-10 py-10 bg-slate-800">
+        <div className="hero bg-sky-200 rounded-lg shadow-lg card-hover">
+          <div className="hero-content flex-col lg:flex-row-reverse m-0 p-0 lg:m-6 lg:p-6">
+            <div className="flex flex-col justify-center items-center">
+              <div className="rounded-full w-60"><img src="https://i.ibb.co/MVZQ28W/chatting-with-friend-through-messenger-vector-26590462.jpg" width={'100%'} className="rounded-full" alt="" /></div>
+              <h1 className="text-3xl font-bold">You can "Chat" with us...</h1>
+            </div>
+            <div className="">
+            <Chat></Chat>
+            </div>
+          </div>
+        </div>
+        <div className="hero bg-sky-200 rounded-lg shadow-lg card-hover">
+          <div className="hero-content flex-col lg:flex-row">
+            <img
+              src="https://i.ibb.co/GCWjmym/24-hours-support.png"
+              className="max-w-sm rounded-lg shadow-2xl"
+              width={"200px"}
+            />
+            <div>
+              <h1 className="text-5xl font-bold">24/7 Support</h1>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+
+      
+
       <Footer />
     </div>
   );

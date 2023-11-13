@@ -4,7 +4,7 @@ import './Root.css';
 
 const Root = () => {
     return (
-        <div className="font-avenir bg-gradient-to-r from-slate-400 to-slate-400">
+        <div className="font-avenir bg-blue-200">
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>

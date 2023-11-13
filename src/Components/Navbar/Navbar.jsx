@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-slate-400 via-cyan-300 to-blue-400 px-6 py-3 flex justify-between">
+    <div className="text-white bg-gradient-to-r from-slate-400 via-cyan-300 to-blue-400 px-6 py-3 flex justify-between">
       <Link to={"/"} className="flex flex-col lg:flex-row items-center">
         <img
           className="rounded-full mr-2"
